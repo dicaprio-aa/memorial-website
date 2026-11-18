@@ -5,12 +5,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Akhila Reji | In Loving Memory</title>
     <style>
-        html, body { width: 100%; min-height: 100%; margin: 0; }
+        *, *::before, *::after { box-sizing: border-box; }
+        html, body { width: 100%; height: 100%; margin: 0; padding: 0; overflow: hidden; }
         body { min-height: 100vh; min-height: 100svh; }
-        img { display: block; width: 100vw; height: 100vh; height: 100svh; object-fit: contain; }
+        .home-art { position: fixed; inset: 0; width: 100vw; height: 100vh; height: 100svh; margin: 0; padding: 0; overflow: hidden; }
+        .home-art > img { display: block; width: 100vw; max-width: none; height: 100vh; height: 100svh; margin: 0; padding: 0; object-fit: fill; }
+        .home-nav { position: fixed; z-index: 3; top: 0; right: 0; left: 0; display: flex; justify-content: flex-end; flex-wrap: wrap; gap: 12px clamp(16px, 2vw, 30px); margin: 0; padding: 22px clamp(20px, 4vw, 64px); background: transparent; }
+        .home-nav a { color: #fff; font: 500 14px/1.35 Arial, Helvetica, sans-serif; text-decoration: none; text-shadow: 0 1px 5px rgba(0,0,0,.78), 0 0 12px rgba(0,0,0,.55); white-space: nowrap; }
+        .home-nav a:hover, .home-nav a:focus-visible { text-decoration: underline; text-underline-offset: 4px; }
+        .butterfly-layer { position: fixed; z-index: 2; inset: 0; overflow: hidden; pointer-events: none; perspective: 900px; }
+        .butterfly { position: absolute; width: var(--size); height: auto; left: 0; top: 0; opacity: 0; will-change: transform, opacity; transform-style: preserve-3d; }
+        .butterfly img { display: block; width: 100%; height: auto; overflow: visible; filter: drop-shadow(0 2px 3px rgba(24, 50, 54, .17)); }
+        .butterfly--blue img { filter: hue-rotate(155deg) saturate(.54) brightness(1.24) drop-shadow(0 2px 3px rgba(24, 50, 54, .15)); }
+        .butterfly--ivory img { filter: grayscale(.75) brightness(1.38) saturate(.32) drop-shadow(0 2px 3px rgba(24, 50, 54, .14)); }
+        .butterfly--gold img { filter: hue-rotate(-17deg) saturate(.62) brightness(1.13) drop-shadow(0 2px 3px rgba(24, 50, 54, .16)); }
+        .butterfly--orange img { filter: hue-rotate(-34deg) saturate(.55) brightness(1.13) drop-shadow(0 2px 3px rgba(24, 50, 54, .16)); }
+        @media (max-width: 600px) { .butterfly { scale: .82; } }
+        @media (max-width: 700px) { .home-nav { justify-content: center; gap: 9px 17px; padding: 14px 12px; } .home-nav a { font-size: 12px; } }
+        @media (prefers-reduced-motion: reduce) { .butterfly { display: none; } }
     </style>
 </head>
 <body>
-    <img src="assets/home/home.png" alt="Akhila Reji memorial homepage">
+    <main class="home-art">
+        <img src="assets/home/home.png" alt="Akhila Reji memorial homepage">
+    </main>
+    <div class="butterfly-layer" aria-hidden="true"></div>
+    <nav class="home-nav" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html">Life Journey</a>
+        <a href="gallery.html">Memories</a>
+        <a href="videos.html">Video Memories</a>
+        <a href="share.html">Share a Memory</a>
+    </nav>
+    <script src="js/butterflies.js" defer></script>
 </body>
 </html>

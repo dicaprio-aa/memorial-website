@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 190" fill="none">
+  <defs>
+    <linearGradient id="upper" x1=".12" y1=".08" x2=".78" y2=".94" gradientUnits="objectBoundingBox">
+      <stop stop-color="#fff9e8" stop-opacity=".97"/><stop offset=".36" stop-color="#f7d89b" stop-opacity=".96"/><stop offset=".72" stop-color="#d89248" stop-opacity=".94"/><stop offset="1" stop-color="#805034" stop-opacity=".91"/>
+    </linearGradient>
+    <linearGradient id="lower" x1=".18" y1=".04" x2=".83" y2=".95" gradientUnits="objectBoundingBox">
+      <stop stop-color="#fff7df" stop-opacity=".96"/><stop offset=".42" stop-color="#efc786" stop-opacity=".95"/><stop offset="1" stop-color="#9e6240" stop-opacity=".93"/>
+    </linearGradient>
+    <linearGradient id="shine" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#fff" stop-opacity=".68"/><stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="eye">
+      <stop stop-color="#526d70"/><stop offset=".29" stop-color="#ebd6a4"/><stop offset=".55" stop-color="#995f48"/><stop offset=".72" stop-color="#f7e4b8"/><stop offset="1" stop-color="#724d40"/>
+    </radialGradient>
+  </defs>
+  <g class="wing wing-left">
+    <path d="M119 91C103 70 83 39 50 19 31 8 13 10 12 26 10 47 39 68 65 83 42 75 19 80 19 95 19 112 49 121 82 116 62 128 49 145 57 157 66 171 94 158 112 137 121 124 125 106 119 91Z" fill="url(#lower)" stroke="#714a38" stroke-opacity=".83" stroke-width="2"/>
+    <path d="M117 88C104 57 93 25 65 9 49 0 29 1 26 14 22 30 43 48 69 64 85 74 101 83 117 92Z" fill="url(#upper)" stroke="#714a38" stroke-opacity=".82" stroke-width="2"/>
+    <path d="M33 14C53 19 78 43 110 83M19 29C48 37 78 57 113 89M29 45C55 53 81 69 113 94M23 91C51 92 81 100 115 101M31 108C59 108 87 106 115 102M61 151C71 132 91 114 116 101" stroke="#75513d" stroke-opacity=".54" stroke-width="1.35"/>
+    <path d="M31 14C51 10 77 27 99 58 76 46 55 36 31 35Z" fill="url(#shine)" opacity=".55"/>
+    <path d="M35 22C44 15 54 16 59 24 62 31 57 38 49 37 41 36 35 31 35 22Z" fill="url(#eye)" opacity=".87"/>
+    <path d="M41 96C48 87 59 87 64 94 69 102 62 110 53 109 45 108 40 103 41 96Z" fill="url(#eye)" opacity=".75"/>
+    <path d="M46 31C51 30 54 32 55 35" stroke="#fff" stroke-opacity=".7" stroke-width="1.5" stroke-linecap="round"/>
+  </g>
+  <g class="wing wing-right">
+    <path d="M119 91C103 70 83 39 50 19 31 8 13 10 12 26 10 47 39 68 65 83 42 75 19 80 19 95 19 112 49 121 82 116 62 128 49 145 57 157 66 171 94 158 112 137 121 124 125 106 119 91Z" fill="url(#lower)" stroke="#714a38" stroke-opacity=".83" stroke-width="2"/>
+    <path d="M117 88C104 57 93 25 65 9 49 0 29 1 26 14 22 30 43 48 69 64 85 74 101 83 117 92Z" fill="url(#upper)" stroke="#714a38" stroke-opacity=".82" stroke-width="2"/>
+    <path d="M33 14C53 19 78 43 110 83M19 29C48 37 78 57 113 89M29 45C55 53 81 69 113 94M23 91C51 92 81 100 115 101M31 108C59 108 87 106 115 102M61 151C71 132 91 114 116 101" stroke="#75513d" stroke-opacity=".54" stroke-width="1.35"/>
+    <path d="M31 14C51 10 77 27 99 58 76 46 55 36 31 35Z" fill="url(#shine)" opacity=".55"/>
+    <path d="M35 22C44 15 54 16 59 24 62 31 57 38 49 37 41 36 35 31 35 22Z" fill="url(#eye)" opacity=".87"/>
+    <path d="M41 96C48 87 59 87 64 94 69 102 62 110 53 109 45 108 40 103 41 96Z" fill="url(#eye)" opacity=".75"/>
+    <path d="M46 31C51 30 54 32 55 35" stroke="#fff" stroke-opacity=".7" stroke-width="1.5" stroke-linecap="round"/>
+  </g>
+  <g>
+    <path d="M119 91C119 74 120 59 125 46M121 94C130 77 137 67 147 61" stroke="#54453b" stroke-width="1.7" stroke-linecap="round"/>
+    <path d="M119 91C116 111 116 129 120 145" stroke="#3f3935" stroke-width="5" stroke-linecap="round"/>
+    <path d="M120 93C122 107 123 123 121 140" stroke="#f1d8a7" stroke-opacity=".8" stroke-width="1.3" stroke-linecap="round"/>
+    <ellipse cx="119" cy="91" rx="4.2" ry="7.5" fill="#473d38"/>
+  </g>
+  <style>
+    svg { perspective: 430px; }
+    .wing { transform-box: view-box; transform-origin: 120px 92px; animation: flap 1.12s cubic-bezier(.45,0,.55,1) infinite alternate; }
+    .wing-right { animation: flap-right 1.12s cubic-bezier(.45,0,.55,1) -.08s infinite alternate; }
+    @keyframes flap { from { transform: rotateY(2deg) scaleY(1); } to { transform: rotateY(67deg) scaleY(.94); } }
+    @keyframes flap-right { from { transform: scaleX(-1) rotateY(2deg) scaleY(1); } to { transform: scaleX(-1) rotateY(-67deg) scaleY(.94); } }
+    @media (prefers-reduced-motion: reduce) { .wing { animation: none; } }
+  </style>
+</svg>
