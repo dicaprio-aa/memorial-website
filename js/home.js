@@ -1,4 +1,33 @@
 (() => {
+    const heroImage = document.querySelector(".hero-portrait img");
+    if (heroImage) {
+        const portraits = [
+            "assets/images/f15607_295f7ed6e394472ca343853d8d8b82ef~mv2.jpg",
+            "assets/images/f15607_536f770d8bc64a7aabb70030f6729486~mv2.jpg",
+            "assets/images/f15607_7413375f574143b8b4c40714e8fe6287~mv2.jpg",
+            "assets/images/f15607_a41d0e751dee41e2b9a0c80ed0a7c50d~mv2.jpg"
+        ];
+        const storageKey = "akhila-home-hero-photo";
+        const currentPhoto = heroImage.getAttribute("src");
+        let previousPhoto = "";
+        try { previousPhoto = sessionStorage.getItem(storageKey) || ""; } catch { /* Storage may be unavailable. */ }
+
+        const choices = portraits.filter((photo) => photo !== currentPhoto && photo !== previousPhoto);
+        if (choices.length) {
+            const nextPhoto = choices[Math.floor(Math.random() * choices.length)];
+            const preload = new Image();
+            preload.onload = () => {
+                heroImage.classList.add("is-fading");
+                window.setTimeout(() => {
+                    heroImage.src = nextPhoto;
+                    window.requestAnimationFrame(() => heroImage.classList.remove("is-fading"));
+                }, 230);
+                try { sessionStorage.setItem(storageKey, nextPhoto); } catch { /* The image still changes without storage. */ }
+            };
+            preload.src = nextPhoto;
+        }
+    }
+
     const toggle = document.querySelector(".nav-toggle");
     const navigation = document.querySelector("#primary-navigation");
 
