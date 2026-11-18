@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -12,7 +12,7 @@
 </head>
 <body class="home-page">
     <header class="home-header">
-        <a class="home-brand" href="index.html" aria-label="Akhila Reji home">Akhila Reji<span aria-hidden="true">♥</span></a>
+        <a class="home-brand" href="index.html" aria-label="Akhila Reji home">Akhila Reji<span aria-hidden="true">â™¥</span></a>
         <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation" aria-label="Open navigation">
             <span></span><span></span><span></span>
         </button>
@@ -28,30 +28,72 @@
     <main>
         <section class="home-hero" id="home" aria-labelledby="hero-title">
             <div class="hero-butterfly-layer" aria-hidden="true"></div>
-            <div class="hero-copy">
-                <p class="eyebrow">In Loving Memory</p>
-                <h1 id="hero-title">Akhila Reji</h1>
-                <p class="hero-tagline">INTO THE LIGHT OF ETERNITY</p>
-                <div class="hero-dates">
-                    <time datetime="2000-09-06">06 September 2000</time>
-                    <span aria-hidden="true">—</span>
-                    <time datetime="2022-12-30">30 December 2022</time>
+            <div class="hero-stage">
+                <div class="hero-portrait-column">
+                    <figure class="hero-portrait">
+                        <span class="portrait-aureole" aria-hidden="true"></span>
+                        <img src="assets/images/f15607_a41d0e751dee41e2b9a0c80ed0a7c50d~mv2.jpg" alt="A portrait of Akhila Reji" fetchpriority="high">
+                        <figcaption>Akhila Reji</figcaption>
+                    </figure>
+                    <div class="hero-remembrance">
+                        <p class="hero-whisper">Wherever you go, you will always be in our hearts, and we will always love you.</p>
+                        <h1 id="hero-title">In Loving<br>Memory</h1>
+                    </div>
                 </div>
-                <p class="hero-description">This site was created in memory of our Dear Akhila Reji, our loving sister and daughter.</p>
-                <a class="text-link" href="#memories">Remembering Akhila <span aria-hidden="true">↓</span></a>
+                <div class="hero-copy">
+                    <p class="eyebrow">Akhila Reji</p>
+                    <div class="hero-dates">
+                        <time datetime="2000-09-06">06/09/2000</time>
+                        <span aria-hidden="true">&mdash;</span>
+                        <time datetime="2022-12-30">30/12/2022</time>
+                    </div>
+                    <p class="hero-tagline">INTO THE LIGHT OF ETERNITY</p>
+                    <span class="hero-rule" aria-hidden="true"></span>
+                    <div class="hero-candle" aria-hidden="true">
+                        <svg viewBox="0 0 180 360" role="presentation">
+                            <defs>
+                                <linearGradient id="wax" x1="0" x2="1">
+                                    <stop offset="0" stop-color="#c9c2b4"/><stop offset=".24" stop-color="#fff9e9"/><stop offset=".72" stop-color="#eee6d4"/><stop offset="1" stop-color="#bcb5a9"/>
+                                </linearGradient>
+                                <radialGradient id="flame-glow"><stop stop-color="#fff5c5" stop-opacity=".8"/><stop offset="1" stop-color="#e5a842" stop-opacity="0"/></radialGradient>
+                            </defs>
+                            <ellipse cx="91" cy="334" rx="73" ry="12" fill="#030a0f" opacity=".5"/>
+                            <ellipse cx="90" cy="118" rx="74" ry="32" fill="#fff8e8"/>
+                            <path d="M16 119h148v201c0 10-13 17-30 17H45c-17 0-29-7-29-17z" fill="url(#wax)"/>
+                            <path d="M16 120c9 13 19 12 28 1 8 15 18 17 27 2 12 12 22 11 30-2 12 12 22 11 31-1 11 13 22 13 32 0" fill="none" stroke="#fff9ec" stroke-width="8" opacity=".8"/>
+                            <path d="M90 92v27" stroke="#34291e" stroke-width="5" stroke-linecap="round"/>
+                            <ellipse cx="90" cy="54" rx="52" ry="69" fill="url(#flame-glow)" class="flame-halo"/>
+                            <path class="candle-flame" d="M90 7C59 45 72 82 90 91c19-13 29-43 0-84z" fill="#f2b94f"/>
+                            <path d="M90 29c-15 26-9 46 1 54 11-12 14-31-1-54z" fill="#fff3c4"/>
+                        </svg>
+                    </div>
+                </div>
+                <svg class="hero-dove" viewBox="0 0 150 120" aria-hidden="true">
+                    <path d="M16 79c23-1 34-16 42-42 4 18 1 28-4 37 19-16 27-34 30-53 14 20 19 39 10 57 15-7 27-18 39-36-1 26-11 44-30 55-21 12-48 11-73 3z" fill="#f5f0e4" opacity=".9"/>
+                    <path d="M80 88c18-2 34-12 48-29M58 74c6-15 6-28 4-37" fill="none" stroke="#d8d0bd" stroke-width="2" opacity=".75"/>
+                    <circle cx="87" cy="57" r="2" fill="#28313a"/>
+                    <path d="m101 59 14 2-12 5" fill="#d6a343"/>
+                </svg>
             </div>
-            <figure class="hero-portrait">
-                <img src="assets/images/f15607_a41d0e751dee41e2b9a0c80ed0a7c50d~mv2.jpg" alt="A portrait of Akhila Reji" fetchpriority="high">
-                <figcaption>Akhila Reji</figcaption>
-            </figure>
-            <div class="hero-mark" aria-hidden="true">A</div>
         </section>
 
-        <section class="intro-section section-shell" aria-labelledby="intro-title">
-            <div class="section-kicker">A life remembered with love</div>
-            <h2 id="intro-title">A place for memories,<br><em>held close forever.</em></h2>
-            <p>This site was created in memory of our Dear Akhila Reji, our loving sister and daughter.</p>
-            <span class="small-heart" aria-hidden="true">♥</span>
+        <section class="intro-section" aria-labelledby="intro-title">
+            <div class="intro-copy">
+                <p class="section-kicker">A life remembered with love</p>
+                <h2 id="intro-title">A place for memories,<br><em>held close forever.</em></h2>
+                <p>This site was created in memory of our Dear Akhila Reji, our loving sister and daughter.</p>
+                <span class="small-heart" aria-hidden="true">&hearts;</span>
+            </div>
+            <figure class="intro-portrait">
+                <img src="assets/images/f15607_536f770d8bc64a7aabb70030f6729486~mv2.jpg" alt="Akhila Reji in a quiet, joyful moment" loading="lazy" decoding="async">
+                <figcaption>Remembering Akhila Reji</figcaption>
+                <svg class="floral-spray" viewBox="0 0 250 95" aria-hidden="true">
+                    <path d="M125 91C121 60 108 31 76 7m48 84c5-32 22-57 53-79m-49 78c-2-28 1-53 1-77" fill="none" stroke="#b79a5d" stroke-width="1.4"/>
+                    <path d="M92 36C66 34 61 22 61 14c19 0 30 6 31 22zm50 8c22-22 34-17 39-12-12 16-24 19-39 12zm-18-19c-18-20-9-30-3-34 10 14 11 23 3 34zm-3 43c-22-9-28 0-29 7 17 7 27 4 29-7zm9-6c21-15 31-7 34 0-15 11-26 11-34 0z" fill="#536d56" stroke="#9d8657" stroke-width="1"/>
+                    <circle cx="76" cy="8" r="8" fill="#b76e73"/><circle cx="179" cy="13" r="8" fill="#d9b66b"/><circle cx="125" cy="11" r="7" fill="#f1e7d0"/>
+                    <circle cx="76" cy="8" r="2" fill="#eed795"/><circle cx="179" cy="13" r="2" fill="#f5e6b9"/><circle cx="125" cy="11" r="2" fill="#d8b56c"/>
+                </svg>
+            </figure>
         </section>
 
         <section class="family-section section-shell" aria-labelledby="family-title">
@@ -62,7 +104,7 @@
                 <p class="eyebrow">Family memories</p>
                 <h2 id="family-title">A photograph to keep close.</h2>
                 <p>In loving memory of Akhila Reji, our loving sister and daughter.</p>
-                <a class="text-link" href="about.html">Visit Life Journey <span aria-hidden="true">↗</span></a>
+                <a class="text-link" href="about.html">Visit Life Journey <span aria-hidden="true">&rarr;</span></a>
             </div>
         </section>
 
@@ -70,8 +112,8 @@
             <div class="life-copy">
                 <p class="eyebrow">Her memory lives on</p>
                 <h2 id="life-title">Into the light<br>of eternity.</h2>
-                <p>06 September 2000 <span aria-hidden="true">—</span> 30 December 2022</p>
-                <a class="button-link" href="about.html">Life Journey <span aria-hidden="true">→</span></a>
+                <p>06 September 2000 <span aria-hidden="true">&mdash;</span> 30 December 2022</p>
+                <a class="button-link" href="about.html">Life Journey <span aria-hidden="true">&rarr;</span></a>
             </div>
             <figure class="life-photo">
                 <img src="assets/images/f15607_295f7ed6e394472ca343853d8d8b82ef~mv2.jpg" alt="Akhila Reji sharing a joyful moment" loading="lazy" decoding="async">
@@ -85,80 +127,108 @@
                     <p class="eyebrow">A collection of moments</p>
                     <h2 id="memories-title">Memories forever</h2>
                 </div>
-                <a class="text-link desktop-link" href="gallery.html">View all memories <span aria-hidden="true">↗</span></a>
+                <a class="text-link desktop-link" href="gallery.html">View all memories <span aria-hidden="true">&rarr;</span></a>
             </div>
-            <div class="memory-carousel">
-                <button class="carousel-control carousel-prev" type="button" aria-label="Scroll to previous memories">←</button>
-                <div class="memory-track" id="memory-track" tabindex="0" aria-label="Selected photo memories">
-                    <figure class="memory-card"><img src="assets/images/f15607_33cfc25efd044fc5aee461fc5867b6ea~mv2.jpg" alt="Akhila Reji with loved ones" loading="lazy" decoding="async"></figure>
-                    <figure class="memory-card"><img src="assets/images/f15607_35a5e0396b534691bcf9cd1df3416226~mv2.jpg" alt="Akhila Reji sharing a smile" loading="lazy" decoding="async"></figure>
-                    <figure class="memory-card"><img src="assets/images/f15607_63cec3be5b414f889304243f8c4a3caf~mv2.jpg" alt="A family moment with Akhila Reji" loading="lazy" decoding="async"></figure>
-                    <figure class="memory-card"><img src="assets/images/f15607_880cc29029114c91831caa107b1ef8c0~mv2.jpg" alt="Akhila Reji among flowers with a loved one" loading="lazy" decoding="async"></figure>
-                    <figure class="memory-card"><img src="assets/images/f15607_aac9b52636f640adb6682c67481158f8~mv2.jpg" alt="Akhila Reji with a loved one" loading="lazy" decoding="async"></figure>
+            <div class="album-frame">
+                <div class="memory-carousel">
+                    <button class="carousel-control carousel-prev" type="button" aria-label="Scroll to previous memories">&larr;</button>
+                    <div class="memory-track" id="memory-track" tabindex="0" aria-label="Selected photo memories">
+                        <figure class="memory-card"><img src="assets/images/f15607_33cfc25efd044fc5aee461fc5867b6ea~mv2.jpg" alt="Akhila Reji with loved ones" loading="lazy" decoding="async"></figure>
+                        <figure class="memory-card"><img src="assets/images/f15607_35a5e0396b534691bcf9cd1df3416226~mv2.jpg" alt="Akhila Reji sharing a smile" loading="lazy" decoding="async"></figure>
+                        <figure class="memory-card"><img src="assets/images/f15607_63cec3be5b414f889304243f8c4a3caf~mv2.jpg" alt="A family moment with Akhila Reji" loading="lazy" decoding="async"></figure>
+                        <figure class="memory-card"><img src="assets/images/f15607_880cc29029114c91831caa107b1ef8c0~mv2.jpg" alt="Akhila Reji among flowers with a loved one" loading="lazy" decoding="async"></figure>
+                        <figure class="memory-card"><img src="assets/images/f15607_aac9b52636f640adb6682c67481158f8~mv2.jpg" alt="Akhila Reji with a loved one" loading="lazy" decoding="async"></figure>
+                    </div>
+                    <button class="carousel-control carousel-next" type="button" aria-label="Scroll to next memories">&rarr;</button>
                 </div>
-                <button class="carousel-control carousel-next" type="button" aria-label="Scroll to next memories">→</button>
             </div>
-            <a class="button-link mobile-link" href="gallery.html">Explore Memories <span aria-hidden="true">→</span></a>
+            <a class="button-link mobile-link" href="gallery.html">Explore Memories <span aria-hidden="true">&rarr;</span></a>
         </section>
 
-        <section class="video-section section-shell" aria-labelledby="video-title">
-            <div class="section-heading">
-                <div>
-                    <p class="eyebrow">Moments in motion</p>
-                    <h2 id="video-title">Video memories</h2>
+        <section class="video-section" aria-labelledby="video-title">
+            <div class="section-shell">
+                <div class="section-heading">
+                    <div>
+                        <p class="eyebrow">Moments in motion</p>
+                        <h2 id="video-title">Video memories</h2>
+                    </div>
+                    <a class="text-link desktop-link" href="videos.html">View all videos <span aria-hidden="true">&rarr;</span></a>
                 </div>
-                <a class="text-link desktop-link" href="videos.html">View all videos <span aria-hidden="true">↗</span></a>
+                <div class="video-preview-grid">
+                    <figure class="video-preview">
+                        <video controls playsinline preload="none" poster="assets/images/f15607_00d9bd62f73749e6bdf9e3ad09a34740~mv2.jpg" aria-label="Video memory one">
+                            <source src="assets/videos/file (1).mp4" type="video/mp4">
+                        </video>
+                    </figure>
+                    <figure class="video-preview">
+                        <video controls playsinline preload="none" poster="assets/images/f15607_0aa5e02c8a884110a78bbb839959764e~mv2.jpg" aria-label="Video memory two">
+                            <source src="assets/videos/file (5).mp4" type="video/mp4">
+                        </video>
+                    </figure>
+                    <figure class="video-preview">
+                        <video controls playsinline preload="none" poster="assets/images/f15607_1380eb71a7ad43159d40634e80ab5ab2~mv2.jpg" aria-label="Video memory three">
+                            <source src="assets/videos/file (11).mp4" type="video/mp4">
+                        </video>
+                    </figure>
+                </div>
+                <a class="button-link mobile-link" href="videos.html">Video Memories <span aria-hidden="true">&rarr;</span></a>
             </div>
-            <div class="video-preview-grid">
-                <figure class="video-preview">
-                    <video controls playsinline preload="none" poster="assets/images/f15607_00d9bd62f73749e6bdf9e3ad09a34740~mv2.jpg" aria-label="Video memory one">
-                        <source src="assets/videos/file (1).mp4" type="video/mp4">
-                    </video>
-                </figure>
-                <figure class="video-preview">
-                    <video controls playsinline preload="none" poster="assets/images/f15607_0aa5e02c8a884110a78bbb839959764e~mv2.jpg" aria-label="Video memory two">
-                        <source src="assets/videos/file (5).mp4" type="video/mp4">
-                    </video>
-                </figure>
-                <figure class="video-preview">
-                    <video controls playsinline preload="none" poster="assets/images/f15607_1380eb71a7ad43159d40634e80ab5ab2~mv2.jpg" aria-label="Video memory three">
-                        <source src="assets/videos/file (11).mp4" type="video/mp4">
-                    </video>
-                </figure>
-            </div>
-            <a class="button-link mobile-link" href="videos.html">Video Memories <span aria-hidden="true">→</span></a>
         </section>
 
         <section class="quote-section" aria-label="Words of remembrance">
-            <span class="quote-mark" aria-hidden="true">“</span>
-            <blockquote>
-                <p class="main-quote">A bud from earth bloomed in heaven.</p>
-                <p class="additional-quote">Some memories never fade...<br>Some people never leave our hearts...</p>
-            </blockquote>
-            <span class="small-heart" aria-hidden="true">♥</span>
+            <div class="quote-inner">
+                <div class="quote-copy">
+                    <p class="section-kicker">Always in our hearts</p>
+                    <span class="quote-mark" aria-hidden="true">&ldquo;</span>
+                    <blockquote>
+                        <p class="main-quote">A bud from earth bloomed in heaven.</p>
+                        <p class="additional-quote">Some memories never fade...<br>Some people never leave our hearts...</p>
+                    </blockquote>
+                    <span class="small-heart" aria-hidden="true">&hearts;</span>
+                </div>
+                <figure class="quote-portrait">
+                    <img src="assets/images/f15607_7413375f574143b8b4c40714e8fe6287~mv2.jpg" alt="Akhila Reji smiling outdoors" loading="lazy" decoding="async">
+                </figure>
+                <div class="quote-candle" aria-hidden="true">
+                    <svg viewBox="0 0 100 200">
+                        <ellipse cx="50" cy="183" rx="43" ry="8" fill="#02060c" opacity=".55"/>
+                        <path d="M19 72h62v101c0 7-7 10-14 10H33c-8 0-14-3-14-10z" fill="#eee6d6"/>
+                        <ellipse cx="50" cy="72" rx="31" ry="12" fill="#fff8e8"/>
+                        <path d="M50 55v21" stroke="#30281c" stroke-width="3"/>
+                        <path d="M50 5C28 31 39 51 50 57 64 46 68 28 50 5z" fill="#efb64b" class="candle-flame"/>
+                        <path d="M50 23c-10 17-5 27 1 31 7-8 8-18-1-31z" fill="#fff2bf"/>
+                        <ellipse cx="50" cy="32" rx="30" ry="45" fill="#e7aa43" opacity=".16" class="flame-halo"/>
+                    </svg>
+                </div>
+                <svg class="quote-florals" viewBox="0 0 420 140" aria-hidden="true">
+                    <path d="M3 135C65 85 103 88 171 126m246 9c-62-50-100-47-168-9" fill="none" stroke="#718364" stroke-width="2"/>
+                    <path d="M43 104c-24-24-8-40 1-43 14 18 13 32-1 43zm69 7c-4-30 17-37 27-34 4 24-6 35-27 34zm-70 5c28-13 41 2 42 12-22 12-36 7-42-12zm293-12c24-24 8-40-1-43-14 18-13 32 1 43zm-69 7c4-30-17-37-27-34-4 24 6 35 27 34zm70 5c-28-13-41 2-42 12 22 12 36 7 42-12z" fill="#435c49" stroke="#8a754d" stroke-width="1"/>
+                    <g fill="#8b3943"><circle cx="88" cy="97" r="16"/><circle cx="104" cy="103" r="14"/><circle cx="91" cy="114" r="15"/><circle cx="332" cy="97" r="16"/><circle cx="316" cy="103" r="14"/><circle cx="329" cy="114" r="15"/></g>
+                    <g fill="#d6ac60"><circle cx="94" cy="104" r="4"/><circle cx="326" cy="104" r="4"/></g>
+                </svg>
+            </div>
         </section>
 
         <section class="share-section section-shell" aria-labelledby="share-title">
             <p class="eyebrow">Keep her memory close</p>
             <h2 id="share-title">Share Your Memories</h2>
             <p>Every memory keeps her close to our hearts. Share a special moment, photograph or message.</p>
-            <a class="button-link" href="share.html">Share a Memory <span aria-hidden="true">→</span></a>
+            <a class="button-link" href="share.html">Share a Memory <span aria-hidden="true">&rarr;</span></a>
         </section>
 
         <section class="closing-section" aria-label="In loving memory">
-            <span class="closing-heart" aria-hidden="true">♥</span>
+            <span class="closing-heart" aria-hidden="true">&hearts;</span>
             <h2>Akhila Reji</h2>
             <p class="hero-tagline">INTO THE LIGHT OF ETERNITY</p>
             <p class="closing-words">Forever remembered. Forever loved.</p>
         </section>
     </main>
-
     <footer class="home-footer">
         <nav aria-label="Footer navigation">
             <a href="index.html">Home</a><a href="about.html">Life Journey</a><a href="gallery.html">Memories</a><a href="videos.html">Video Memories</a><a href="share.html">Share a Memory</a>
         </nav>
         <div class="footer-meta">
-            <small>© 2026 Akhila Reji Memorial</small>
+            <small>Â© 2026 Akhila Reji Memorial</small>
             <span class="footer-credit">Designed &amp; Developed by <a href="https://adnov.in" target="_blank" rel="noopener noreferrer">ADNOV</a></span>
         </div>
     </footer>

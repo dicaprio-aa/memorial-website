@@ -71,3 +71,31 @@ document.querySelectorAll(".video-card video[data-src]").forEach((video) => {
         video.removeAttribute("src");
     });
 });
+
+document.querySelectorAll(".inner-nav-toggle").forEach((toggle) => {
+    const navigation = document.getElementById(toggle.getAttribute("aria-controls"));
+    if (!navigation) return;
+
+    const closeNavigation = () => {
+        toggle.setAttribute("aria-expanded", "false");
+        toggle.setAttribute("aria-label", "Open navigation");
+        navigation.classList.remove("is-open");
+    };
+
+    toggle.addEventListener("click", () => {
+        const isOpen = toggle.getAttribute("aria-expanded") === "true";
+        toggle.setAttribute("aria-expanded", String(!isOpen));
+        toggle.setAttribute("aria-label", isOpen ? "Open navigation" : "Close navigation");
+        navigation.classList.toggle("is-open", !isOpen);
+    });
+
+    navigation.addEventListener("click", (event) => {
+        if (event.target.closest("a")) closeNavigation();
+    });
+    document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape") closeNavigation();
+    });
+    document.addEventListener("click", (event) => {
+        if (!navigation.contains(event.target) && !toggle.contains(event.target)) closeNavigation();
+    });
+});
