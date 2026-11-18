@@ -1490,3 +1490,91 @@ button {
     .memorial-tagline { font-size: 9px; }
     .memorial-title .description { font-size: 14px; }
 }
+
+/* Quiet butterfly drift, kept around the outer sky and flower edges. */
+.butterfly-field {
+    position: absolute;
+    z-index: 0;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.butterfly {
+    position: absolute;
+    width: 17px;
+    height: 18px;
+    opacity: .68;
+    filter: drop-shadow(0 1px 5px rgba(255,255,255,.8));
+    animation: butterfly-drift 19s ease-in-out infinite alternate;
+}
+
+.butterfly::before,
+.butterfly::after {
+    position: absolute;
+    top: 2px;
+    width: 8px;
+    height: 12px;
+    content: "";
+    border: 1px solid rgba(255,255,255,.82);
+    border-radius: 80% 25% 75% 35%;
+    background: linear-gradient(145deg, rgba(255,255,255,.9), rgba(203,230,245,.65));
+    transform-origin: 100% 85%;
+    animation: butterfly-wings 1.15s ease-in-out infinite alternate;
+}
+
+.butterfly::before { left: 0; transform: rotate(-22deg); }
+.butterfly::after {
+    right: 0;
+    border-radius: 25% 80% 35% 75%;
+    background: linear-gradient(215deg, rgba(255,255,255,.88), rgba(221,232,247,.62));
+    transform-origin: 0 85%;
+    animation-delay: -.18s;
+}
+
+.butterfly--one { top: 25%; left: 24%; animation-duration: 23s; }
+.butterfly--two { top: 19%; right: 15%; opacity: .54; animation-duration: 27s; animation-delay: -9s; }
+.butterfly--three { top: 62%; left: 7%; animation-duration: 21s; animation-delay: -6s; }
+.butterfly--four { top: 68%; right: 8%; opacity: .58; animation-duration: 25s; animation-delay: -13s; }
+.butterfly--five { top: 43%; right: 22%; opacity: .48; animation-duration: 29s; animation-delay: -17s; }
+
+@keyframes butterfly-drift {
+    0% { translate: -5px 5px; rotate: -7deg; }
+    45% { translate: 13px -14px; rotate: 5deg; }
+    100% { translate: -3px 9px; rotate: -3deg; }
+}
+
+@keyframes butterfly-wings {
+    from { scale: 1 1; }
+    to { scale: .72 .88; }
+}
+
+/* A brighter, feathered glow improves contrast without a panel edge. */
+.memorial-title {
+    background:
+        radial-gradient(ellipse 72% 88% at 50% 74%, rgba(255,255,255,.42) 0%, rgba(255,255,255,.18) 62%, transparent 100%),
+        linear-gradient(180deg, rgba(248,252,253,0) 0%, rgba(248,252,253,.68) 25%, rgba(248,252,253,.88) 58%, rgba(248,252,253,.32) 100%);
+}
+
+.memorial-title h1,
+.memorial-title .description { text-shadow: 0 1px 20px rgba(255,255,255,.96); }
+
+@media (max-width: 760px) {
+    .butterfly { scale: .84; }
+    .butterfly--one { top: 24%; left: 15%; }
+    .butterfly--two { top: 25%; right: 8%; }
+    .butterfly--five { top: 57%; right: 7%; }
+    .memorial-title {
+        background:
+            radial-gradient(ellipse 100% 90% at 50% 76%, rgba(255,255,255,.35) 0%, rgba(255,255,255,.12) 66%, transparent 100%),
+            linear-gradient(180deg, rgba(248,252,253,0) 0%, rgba(248,252,253,.72) 22%, rgba(248,252,253,.9) 60%, rgba(248,252,253,.42) 100%);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .butterfly,
+    .butterfly::before,
+    .butterfly::after {
+        animation: none !important;
+    }
+}
