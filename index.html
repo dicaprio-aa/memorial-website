@@ -6,14 +6,14 @@
     <title>Akhila Reji | In Loving Memory</title>
     <style>
         *, *::before, *::after { box-sizing: border-box; }
-        html, body { width: 100%; height: 100%; margin: 0; padding: 0; overflow: hidden; }
+        html, body { width: 100%; min-height: 100%; margin: 0; padding: 0; }
         body { min-height: 100vh; min-height: 100svh; }
-        .home-art { position: fixed; inset: 0; width: 100vw; height: 100vh; height: 100svh; margin: 0; padding: 0; overflow: hidden; }
-        .home-art > img { display: block; width: 100vw; max-width: none; height: 100vh; height: 100svh; margin: 0; padding: 0; object-fit: fill; }
-        .home-nav { position: fixed; z-index: 3; top: 0; right: 0; left: 0; display: flex; justify-content: flex-end; flex-wrap: wrap; gap: 12px clamp(16px, 2vw, 30px); margin: 0; padding: 22px clamp(20px, 4vw, 64px); background: transparent; }
+        .home-art { position: relative; width: 100%; margin: 0; padding: 0; }
+        .home-art > img { display: block; width: 100%; max-width: none; height: auto; margin: 0; padding: 0; }
+        .home-nav { position: absolute; z-index: 3; top: 0; right: 0; left: 0; display: flex; justify-content: flex-end; flex-wrap: wrap; gap: 12px clamp(16px, 2vw, 30px); margin: 0; padding: 22px clamp(20px, 4vw, 64px); background: transparent; }
         .home-nav a { color: #fff; font: 500 14px/1.35 Arial, Helvetica, sans-serif; text-decoration: none; text-shadow: 0 1px 5px rgba(0,0,0,.78), 0 0 12px rgba(0,0,0,.55); white-space: nowrap; }
         .home-nav a:hover, .home-nav a:focus-visible { text-decoration: underline; text-underline-offset: 4px; }
-        .butterfly-layer { position: fixed; z-index: 2; inset: 0; overflow: hidden; pointer-events: none; perspective: 900px; }
+        .butterfly-layer { position: absolute; z-index: 2; inset: 0; pointer-events: none; perspective: 900px; }
         .butterfly { position: absolute; width: var(--size); height: auto; left: 0; top: 0; opacity: 0; will-change: transform, opacity; transform-style: preserve-3d; }
         .butterfly img { display: block; width: 100%; height: auto; overflow: visible; filter: drop-shadow(0 2px 3px rgba(24, 50, 54, .17)); }
         .butterfly--blue img { filter: hue-rotate(155deg) saturate(.54) brightness(1.24) drop-shadow(0 2px 3px rgba(24, 50, 54, .15)); }

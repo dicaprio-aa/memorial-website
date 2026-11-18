@@ -25,7 +25,7 @@
             return { x: random(.77, .965) * bounds.width, y: yRise * bounds.height };
         }
         return {
-            x: (.75 + progress * .22 + random(-.025, .025)) * bounds.width,
+            x: (.75 + progress * .18 + random(-.02, .02)) * bounds.width,
             y: (.12 + Math.sin(progress * Math.PI * 2) * .085 + random(-.025, .025)) * bounds.height
         };
     }
@@ -45,7 +45,7 @@
                 const depth = random(.72, 1.17);
                 const turn = route.kind === "cross-sky" ? random(-13, 13) : random(-19, 19);
                 frames.push({
-                    transform: `translate3d(${bounds.left + p.x - size / 2}px, ${bounds.top + p.y - size / 2}px, 0) rotate(${turn}deg) scale(${depth})`,
+                    transform: `translate3d(${p.x - size / 2}px, ${p.y - size / 2}px, 0) rotate(${turn}deg) scale(${depth})`,
                     opacity: (i === 0 || i === count - 1) ? 0 : random(.62, .88),
                     offset: i / (count - 1),
                     easing: i === 0 || i === count - 2 ? "cubic-bezier(.37,0,.62,1)" : "cubic-bezier(.45,0,.55,1)"
