@@ -1,6 +1,6 @@
 (() => {
-    const layer = document.querySelector(".butterfly-layer");
-    const artwork = document.querySelector(".home-art > img");
+    const layer = document.querySelector(".hero-butterfly-layer");
+    const artwork = document.querySelector(".home-hero");
     const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
     if (!layer || !artwork || reducedMotion.matches || !Element.prototype.animate) return;
 

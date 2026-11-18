@@ -3,40 +3,164 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#f7f8f5">
+    <meta name="description" content="In loving memory of Akhila Reji.">
     <title>Akhila Reji | In Loving Memory</title>
-    <style>
-        *, *::before, *::after { box-sizing: border-box; }
-        html, body { width: 100%; min-height: 100%; margin: 0; padding: 0; }
-        body { min-height: 100vh; min-height: 100svh; }
-        .home-art { position: relative; width: 100%; margin: 0; padding: 0; }
-        .home-art > img { display: block; width: 100%; max-width: none; height: auto; margin: 0; padding: 0; }
-        .home-nav { position: absolute; z-index: 3; top: 0; right: 0; left: 0; display: flex; justify-content: flex-end; flex-wrap: wrap; gap: 12px clamp(16px, 2vw, 30px); margin: 0; padding: 22px clamp(20px, 4vw, 64px); background: transparent; }
-        .home-nav a { color: #fff; font: 500 14px/1.35 Arial, Helvetica, sans-serif; text-decoration: none; text-shadow: 0 1px 5px rgba(0,0,0,.78), 0 0 12px rgba(0,0,0,.55); white-space: nowrap; }
-        .home-nav a:hover, .home-nav a:focus-visible { text-decoration: underline; text-underline-offset: 4px; }
-        .butterfly-layer { position: absolute; z-index: 2; inset: 0; pointer-events: none; perspective: 900px; }
-        .butterfly { position: absolute; width: var(--size); height: auto; left: 0; top: 0; opacity: 0; will-change: transform, opacity; transform-style: preserve-3d; }
-        .butterfly img { display: block; width: 100%; height: auto; overflow: visible; filter: drop-shadow(0 2px 3px rgba(24, 50, 54, .17)); }
-        .butterfly--blue img { filter: hue-rotate(155deg) saturate(.54) brightness(1.24) drop-shadow(0 2px 3px rgba(24, 50, 54, .15)); }
-        .butterfly--ivory img { filter: grayscale(.75) brightness(1.38) saturate(.32) drop-shadow(0 2px 3px rgba(24, 50, 54, .14)); }
-        .butterfly--gold img { filter: hue-rotate(-17deg) saturate(.62) brightness(1.13) drop-shadow(0 2px 3px rgba(24, 50, 54, .16)); }
-        .butterfly--orange img { filter: hue-rotate(-34deg) saturate(.55) brightness(1.13) drop-shadow(0 2px 3px rgba(24, 50, 54, .16)); }
-        @media (max-width: 600px) { .butterfly { scale: .82; } }
-        @media (max-width: 700px) { .home-nav { justify-content: center; gap: 9px 17px; padding: 14px 12px; } .home-nav a { font-size: 12px; } }
-        @media (prefers-reduced-motion: reduce) { .butterfly { display: none; } }
-    </style>
+    <link rel="preload" as="image" href="assets/images/f15607_a41d0e751dee41e2b9a0c80ed0a7c50d~mv2.jpg" fetchpriority="high">
+    <link rel="stylesheet" href="css/home.css">
 </head>
-<body>
-    <main class="home-art">
-        <img src="assets/images/cover.png" alt="Akhila Reji memorial homepage">
+<body class="home-page">
+    <header class="home-header">
+        <a class="home-brand" href="index.html" aria-label="Akhila Reji home">Akhila Reji<span aria-hidden="true">♥</span></a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation" aria-label="Open navigation">
+            <span></span><span></span><span></span>
+        </button>
+        <nav class="primary-navigation" id="primary-navigation" aria-label="Main navigation">
+            <a href="index.html" aria-current="page">Home</a>
+            <a href="about.html">Life Journey</a>
+            <a href="gallery.html">Memories</a>
+            <a href="videos.html">Video Memories</a>
+            <a class="nav-share" href="share.html">Share a Memory</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="home-hero" id="home" aria-labelledby="hero-title">
+            <div class="hero-butterfly-layer" aria-hidden="true"></div>
+            <div class="hero-copy">
+                <p class="eyebrow">In Loving Memory</p>
+                <h1 id="hero-title">Akhila Reji</h1>
+                <p class="hero-tagline">INTO THE LIGHT OF ETERNITY</p>
+                <div class="hero-dates">
+                    <time datetime="2000-09-06">06 September 2000</time>
+                    <span aria-hidden="true">—</span>
+                    <time datetime="2022-12-30">30 December 2022</time>
+                </div>
+                <p class="hero-description">This site was created in memory of our Dear Akhila Reji, our loving sister and daughter.</p>
+                <a class="text-link" href="#memories">Remembering Akhila <span aria-hidden="true">↓</span></a>
+            </div>
+            <figure class="hero-portrait">
+                <img src="assets/images/f15607_a41d0e751dee41e2b9a0c80ed0a7c50d~mv2.jpg" alt="Akhila Reji in a blue and gold saree" fetchpriority="high">
+                <figcaption>Akhila Reji</figcaption>
+            </figure>
+            <div class="hero-mark" aria-hidden="true">A</div>
+        </section>
+
+        <section class="intro-section section-shell" aria-labelledby="intro-title">
+            <div class="section-kicker">A life remembered with love</div>
+            <h2 id="intro-title">A place for memories,<br><em>held close forever.</em></h2>
+            <p>This site was created in memory of our Dear Akhila Reji, our loving sister and daughter.</p>
+            <span class="small-heart" aria-hidden="true">♥</span>
+        </section>
+
+        <section class="family-section section-shell" aria-labelledby="family-title">
+            <figure class="family-photo">
+                <img src="assets/images/family.jpg" alt="Akhila Reji with family" loading="lazy" decoding="async">
+            </figure>
+            <div class="family-copy">
+                <p class="eyebrow">Family memories</p>
+                <h2 id="family-title">A photograph to keep close.</h2>
+                <p>In loving memory of Akhila Reji, our loving sister and daughter.</p>
+                <a class="text-link" href="about.html">Visit Life Journey <span aria-hidden="true">↗</span></a>
+            </div>
+        </section>
+
+        <section class="life-section" aria-labelledby="life-title">
+            <div class="life-copy">
+                <p class="eyebrow">Her memory lives on</p>
+                <h2 id="life-title">Into the light<br>of eternity.</h2>
+                <p>06 September 2000 <span aria-hidden="true">—</span> 30 December 2022</p>
+                <a class="button-link" href="about.html">Life Journey <span aria-hidden="true">→</span></a>
+            </div>
+            <figure class="life-photo">
+                <img src="assets/images/f15607_295f7ed6e394472ca343853d8d8b82ef~mv2.jpg" alt="Akhila Reji sharing a joyful moment" loading="lazy" decoding="async">
+            </figure>
+            <div class="life-index" aria-hidden="true">01 / 01</div>
+        </section>
+
+        <section class="memories-section section-shell" id="memories" aria-labelledby="memories-title">
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">A collection of moments</p>
+                    <h2 id="memories-title">Memories forever</h2>
+                </div>
+                <a class="text-link desktop-link" href="gallery.html">View all memories <span aria-hidden="true">↗</span></a>
+            </div>
+            <div class="memory-carousel">
+                <button class="carousel-control carousel-prev" type="button" aria-label="Scroll to previous memories">←</button>
+                <div class="memory-track" id="memory-track" tabindex="0" aria-label="Selected photo memories">
+                    <figure class="memory-card"><img src="assets/images/f15607_33cfc25efd044fc5aee461fc5867b6ea~mv2.jpg" alt="Akhila Reji with loved ones" loading="lazy" decoding="async"></figure>
+                    <figure class="memory-card"><img src="assets/images/f15607_35a5e0396b534691bcf9cd1df3416226~mv2.jpg" alt="Akhila Reji sharing a smile" loading="lazy" decoding="async"></figure>
+                    <figure class="memory-card"><img src="assets/images/f15607_63cec3be5b414f889304243f8c4a3caf~mv2.jpg" alt="A family moment with Akhila Reji" loading="lazy" decoding="async"></figure>
+                    <figure class="memory-card"><img src="assets/images/f15607_880cc29029114c91831caa107b1ef8c0~mv2.jpg" alt="Akhila Reji among flowers with a loved one" loading="lazy" decoding="async"></figure>
+                    <figure class="memory-card"><img src="assets/images/f15607_aac9b52636f640adb6682c67481158f8~mv2.jpg" alt="Akhila Reji with a loved one" loading="lazy" decoding="async"></figure>
+                </div>
+                <button class="carousel-control carousel-next" type="button" aria-label="Scroll to next memories">→</button>
+            </div>
+            <a class="button-link mobile-link" href="gallery.html">Explore Memories <span aria-hidden="true">→</span></a>
+        </section>
+
+        <section class="video-section section-shell" aria-labelledby="video-title">
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">Moments in motion</p>
+                    <h2 id="video-title">Video memories</h2>
+                </div>
+                <a class="text-link desktop-link" href="videos.html">View all videos <span aria-hidden="true">↗</span></a>
+            </div>
+            <div class="video-preview-grid">
+                <figure class="video-preview">
+                    <video controls playsinline preload="none" poster="assets/images/f15607_00d9bd62f73749e6bdf9e3ad09a34740~mv2.jpg" aria-label="Video memory one">
+                        <source src="assets/videos/file (1).mp4" type="video/mp4">
+                    </video>
+                </figure>
+                <figure class="video-preview">
+                    <video controls playsinline preload="none" poster="assets/images/f15607_0aa5e02c8a884110a78bbb839959764e~mv2.jpg" aria-label="Video memory two">
+                        <source src="assets/videos/file (5).mp4" type="video/mp4">
+                    </video>
+                </figure>
+                <figure class="video-preview">
+                    <video controls playsinline preload="none" poster="assets/images/f15607_1380eb71a7ad43159d40634e80ab5ab2~mv2.jpg" aria-label="Video memory three">
+                        <source src="assets/videos/file (11).mp4" type="video/mp4">
+                    </video>
+                </figure>
+            </div>
+            <a class="button-link mobile-link" href="videos.html">Video Memories <span aria-hidden="true">→</span></a>
+        </section>
+
+        <section class="quote-section" aria-label="Words of remembrance">
+            <span class="quote-mark" aria-hidden="true">“</span>
+            <blockquote>
+                <p class="main-quote">A bud from earth bloomed in heaven.</p>
+                <p class="additional-quote">Some memories never fade...<br>Some people never leave our hearts...</p>
+            </blockquote>
+            <span class="small-heart" aria-hidden="true">♥</span>
+        </section>
+
+        <section class="share-section section-shell" aria-labelledby="share-title">
+            <p class="eyebrow">Keep her memory close</p>
+            <h2 id="share-title">Share Your Memories</h2>
+            <p>Every memory keeps her close to our hearts. Share a special moment, photograph or message.</p>
+            <a class="button-link" href="share.html">Share a Memory <span aria-hidden="true">→</span></a>
+        </section>
+
+        <section class="closing-section" aria-label="In loving memory">
+            <span class="closing-heart" aria-hidden="true">♥</span>
+            <h2>Akhila Reji</h2>
+            <p class="hero-tagline">INTO THE LIGHT OF ETERNITY</p>
+            <p class="closing-words">Forever remembered. Forever loved.</p>
+        </section>
     </main>
-    <div class="butterfly-layer" aria-hidden="true"></div>
-    <nav class="home-nav" aria-label="Main navigation">
-        <a href="index.html">Home</a>
-        <a href="about.html">Life Journey</a>
-        <a href="gallery.html">Memories</a>
-        <a href="videos.html">Video Memories</a>
-        <a href="share.html">Share a Memory</a>
-    </nav>
+
+    <footer class="home-footer">
+        <a class="home-brand" href="index.html">Akhila Reji<span aria-hidden="true">♥</span></a>
+        <p>INTO THE LIGHT OF ETERNITY</p>
+        <nav aria-label="Footer navigation">
+            <a href="index.html">Home</a><a href="about.html">Life Journey</a><a href="gallery.html">Memories</a><a href="videos.html">Video Memories</a><a href="share.html">Share a Memory</a>
+        </nav>
+        <small>© 2026 Akhila Reji Memorial</small>
+    </footer>
+    <script src="js/home.js" defer></script>
     <script src="js/butterflies.js" defer></script>
 </body>
 </html>
