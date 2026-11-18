@@ -198,8 +198,6 @@ body.home-page .home-brand {
     font: 600 clamp(27px, 3.1vw, 44px)/1.35 var(--home-serif);
     letter-spacing: .035em;
 }
-.hero-tagline { margin: 9px 0 0; color: #daa648; font: 400 clamp(17px, 1.7vw, 23px)/1.5 var(--home-serif); letter-spacing: .09em; }
-.hero-rule { width: min(300px, 66%); height: 1px; margin-top: 17px; background: linear-gradient(90deg, transparent, rgba(239,222,183,.82), transparent); }
 .hero-candle { position: absolute; z-index: 1; right: 1%; bottom: -2%; width: clamp(300px, 32vw, 500px); max-width: 46%; height: min(76%, 650px); object-fit: contain; object-position: center bottom; filter: drop-shadow(0 0 30px rgba(236, 173, 64, .24)); pointer-events: none; }
 .candle-flame { transform-origin: 50% 92%; animation: candle-flicker 2.6s ease-in-out infinite alternate; }
 .flame-halo { transform-origin: center; animation: candle-glow 3.1s ease-in-out infinite alternate; }
@@ -261,7 +259,7 @@ body.home-page .home-brand {
 .intro-portrait::before { position: absolute; z-index: -1; top: -12px; right: 8px; left: 8px; height: 302px; border: 1px solid rgba(214,163,67,.28); content: ""; }
 .intro-portrait img { width: 100%; height: 278px; border: 1px solid rgba(229, 210, 169, .32); border-radius: 2px; box-shadow: 0 16px 44px rgba(0,0,0,.38), 0 0 26px rgba(214,163,67,.1); object-fit: cover; object-position: center 18%; }
 .floral-spray { position: relative; display: block; width: min(78%, 235px); height: auto; margin: 8px auto 0; filter: drop-shadow(0 4px 12px rgba(0,0,0,.25)); }
-.life-story { position: relative; z-index: 1; width: min(100%, 820px); color: #d2d6dd; font-family: "Noto Sans Malayalam", "Nirmala UI", "Manjari", sans-serif; font-size: clamp(16px, 1.25vw, 19px); line-height: 1.95; text-align: justify; text-justify: inter-word; }
+.life-story { position: relative; z-index: 1; width: min(100%, 820px); color: #d2d6dd; font-family: "Noto Sans Malayalam", "Nirmala UI", "Manjari", sans-serif; font-size: clamp(16px, 1.25vw, 19px); line-height: 1.95; text-align: left; }
 .life-story p { margin: 0 0 17px; }
 .life-story p:last-child { margin-bottom: 0; }
 
@@ -416,13 +414,6 @@ body.home-page .home-brand {
 .share-section .button-link { color: #111827; background: var(--home-gold); }
 .share-section .button-link:hover { color: var(--home-gold-light); background: transparent; }
 
-.closing-section { position: relative; overflow: hidden; padding: 74px 24px 80px; border-top: 1px solid rgba(214,163,67,.23); background: #0a1423; text-align: center; }
-.closing-section::before { position: absolute; inset: 0; background: radial-gradient(ellipse at 50% 0%, rgba(191,148,67,.12), transparent 58%); content: ""; pointer-events: none; }
-.closing-section > * { position: relative; }
-.closing-heart { color: #d8b66f; font-size: 14px; }
-.closing-section h2 { margin: 8px 0 0; color: #e4c47c; font: italic 34px var(--home-serif); }
-.closing-section .hero-tagline { margin-top: 12px; }
-.closing-words { margin: 12px 0 0; color: #bec4cc; font: italic 16px var(--home-serif); }
 .home-footer {
     display: flex;
     align-items: center;
@@ -479,8 +470,6 @@ body.home-page .home-brand {
     .hero-stage { min-height: 0; grid-template-columns: minmax(0,1fr); gap: 0; padding: 24px 20px 210px; }
     .hero-copy { order: -1; min-height: 0; padding: 0 6px; }
     .hero-dates { margin-top: 0; font-size: clamp(22px, 6vw, 30px); }
-    .hero-tagline { max-width: 310px; margin-top: 5px; font-size: 14px; }
-    .hero-rule { margin-top: 9px; }
     .hero-portrait-column { padding-top: 20px; }
     .hero-portrait { width: min(65vw, 270px); height: min(65vw, 270px); }
     .hero-remembrance { width: min(100%, 450px); margin-top: 25px; }
@@ -538,8 +527,6 @@ body.home-page .home-brand {
     body.home-page .home-brand { font-size: 21px; }
     .hero-stage { padding-inline: 16px; }
     .hero-dates { gap: 2px 7px; font-size: clamp(18px, 5.8vw, 22px); }
-    .hero-tagline { max-width: 100%; font-size: 12px; letter-spacing: .06em; }
-    .hero-rule { width: 62%; }
     .hero-candle { top: 495px; right: 2px; width: 86px; height: 125px; }
     .hero-dove { top: 520px; left: 2px; width: 40px; }
     .section-shell { padding-inline: 18px; }
