@@ -216,12 +216,14 @@ body.home-page figure, body.home-page blockquote { margin: 0; }
 .closing-section h2 { margin: 8px 0 0; color: #314e59; font: italic 35px var(--home-serif); }
 .closing-section .hero-tagline { margin-top: 13px; }
 .closing-words { margin: 13px 0 0; color: #71858a; font: italic 17px var(--home-serif); }
-.home-footer { display: grid; justify-items: center; gap: 12px; padding: 30px 20px 25px; color: #718086; background: #fffefa; text-align: center; }
-.home-footer .home-brand { font-size: 25px; }
-.home-footer > p { margin: 0; font-size: 9px; font-weight: 600; letter-spacing: .18em; }
-.home-footer nav { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px 22px; margin-top: 5px; }
-.home-footer nav a { color: #586e75; font-size: 12px; }
-.home-footer small { color: #8b999b; font-size: 11px; }
+.home-footer { display: flex; align-items: center; justify-content: space-between; gap: 18px 28px; padding: 19px clamp(20px, 5vw, 76px); border-top: 1px solid var(--home-line); color: #718086; background: #fffefa; }
+.home-footer nav { display: flex; flex-wrap: wrap; justify-content: flex-start; gap: 8px 20px; }
+.home-footer nav a { color: #586e75; font-size: 12px; transition: color .2s ease; }
+.home-footer nav a:hover { color: #9b7275; }
+.footer-meta { display: flex; flex-wrap: wrap; align-items: center; justify-content: flex-end; gap: 6px 18px; }
+.home-footer small, .footer-credit { color: #8b999b; font-size: 11px; }
+.footer-credit a { color: #728a91; font-weight: 600; letter-spacing: .05em; }
+.footer-credit a:hover { color: #9b7275; }
 
 @media (max-width: 900px) {
     .home-hero { grid-template-columns: minmax(0, 1fr) minmax(270px, .8fr); gap: 34px; padding-inline: clamp(28px, 7vw, 72px); }
@@ -304,6 +306,9 @@ body.home-page figure, body.home-page blockquote { margin: 0; }
     .quote-section { padding-block: 76px; }
     .additional-quote { font-size: 16px; }
     .share-section { padding-block: 80px 82px; }
+    .home-footer { flex-direction: column; justify-content: center; gap: 12px; padding: 22px 18px; text-align: center; }
+    .home-footer nav { justify-content: center; gap: 8px 16px; }
+    .footer-meta { justify-content: center; gap: 4px 12px; }
 }
 
 @media (max-width: 420px) {
