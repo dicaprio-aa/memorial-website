@@ -1,0 +1,90 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#e8f3fa">
+    <title>Share a Memory | Akhila Reji</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="share-page">
+
+    <header class="top-header">
+        <a class="brand" href="index.html">Akhila Reji ♡</a>
+        <nav class="home-nav" aria-label="Main navigation">
+            <a href="index.html">Home</a>
+            <a href="about.html">Life Journey</a>
+            <a href="gallery.html">Memories</a>
+            <a href="videos.html">Video Memories</a>
+            <a href="share.html" aria-current="page">Share a Memory</a>
+        </nav>
+    </header>
+
+    <main class="share-container">
+        <p class="share-eyebrow">KEEP THE MEMORIES ALIVE</p>
+        <h1>Share a Memory <span>♡</span></h1>
+        <p class="share-intro">
+            Share a photograph, video, or a few words in memory of Akhila Reji.
+        </p>
+
+        <form id="memoryForm" class="memory-form">
+
+            <label for="visitorName">Your Name</label>
+            <input type="text" id="visitorName"
+                   placeholder="Enter your name" required>
+
+            <label for="visitorEmail">Email Address</label>
+            <input type="email" id="visitorEmail"
+                   placeholder="Enter your email">
+
+            <label for="memoryMessage">Your Memory</label>
+            <textarea id="memoryMessage" rows="5"
+                      placeholder="Write a memory or message..."
+                      required></textarea>
+
+            <label>Choose Photos or Videos</label>
+            <label for="memoryFiles" class="upload-area">
+                <span class="upload-icon">＋</span>
+                <strong>Add your memories</strong>
+                <small>Select photos or videos from your device</small>
+                <span id="fileNames">No files selected</span>
+            </label>
+
+            <input type="file" id="memoryFiles"
+                   accept="image/*,video/*" multiple hidden>
+
+            <p class="approval-note">
+                ♡ Your submission will be reviewed before
+                appearing in Akhila Reji's memories gallery.
+            </p>
+
+            <button type="submit" class="submit-memory">
+                Submit Memory ♡
+            </button>
+
+            <p id="formMessage" role="status"></p>
+        </form>
+    </main>
+
+    <script>
+        const fileInput = document.getElementById("memoryFiles");
+        const fileNames = document.getElementById("fileNames");
+
+        fileInput.addEventListener("change", () => {
+            const files = Array.from(fileInput.files);
+            fileNames.textContent = files.length
+                ? files.map(file => file.name).join(", ")
+                : "No files selected";
+        });
+
+        document.getElementById("memoryForm")
+            .addEventListener("submit", (event) => {
+                event.preventDefault();
+                document.getElementById("formMessage").textContent =
+                    "Upload service will be connected in the next step.";
+            });
+    </script>
+
+</body>
+</html>

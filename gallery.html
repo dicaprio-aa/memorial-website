@@ -1,0 +1,85 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#e8f3fa">
+    <title>Memories of Akhila Reji</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="gallery-page">
+
+<header class="site-header">
+    <a href="index.html" class="logo">Akhila Reji</a>
+    <nav aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html">Life Journey</a>
+        <a href="gallery.html" class="active">Memories</a>
+        <a href="videos.html">Video Memories</a>
+        <a href="share.html">Share a Memory</a>
+    </nav>
+</header>
+
+<main class="gallery-shell">
+    <section class="gallery-heading">
+        <span class="gallery-kicker">GALLERY</span>
+        <h1>Memories Forever</h1>
+        <p>Remembering Akhila Reji through the moments and love she shared.</p>
+    </section>
+
+    <nav class="gallery-filters" aria-label="Filter memories">
+        <button class="gallery-filter is-active" type="button" data-category="all" aria-pressed="true">All Memories</button>
+        <button class="gallery-filter" type="button" data-category="family" aria-pressed="false">Family</button>
+        <button class="gallery-filter" type="button" data-category="friends" aria-pressed="false">Friends</button>
+        <button class="gallery-filter" type="button" data-category="moments" aria-pressed="false">Special Moments</button>
+        <button class="gallery-filter" type="button" data-category="celebrations" aria-pressed="false">Celebrations</button>
+        <button class="gallery-filter" type="button" data-category="videos" aria-pressed="false">Videos</button>
+    </nav>
+
+    <section class="gallery-carousel" aria-label="Memorial photo carousel">
+        <div class="carousel-stage" id="carousel-stage" aria-live="polite">
+            <p class="carousel-empty" id="carousel-empty" hidden></p>
+            <button class="carousel-card carousel-card--far-left" type="button" data-position="far-left" aria-label="View photograph"></button>
+            <button class="carousel-card carousel-card--left" type="button" data-position="left" aria-label="View photograph"></button>
+            <button class="carousel-card carousel-card--center" type="button" data-position="center" aria-label="View photograph"></button>
+            <button class="carousel-card carousel-card--right" type="button" data-position="right" aria-label="View photograph"></button>
+            <button class="carousel-card carousel-card--far-right" type="button" data-position="far-right" aria-label="View photograph"></button>
+        </div>
+        <div class="carousel-controls">
+            <button class="carousel-arrow" id="carousel-previous" type="button" aria-label="Previous photo">←</button>
+            <span class="carousel-count" id="carousel-count" aria-live="polite"></span>
+            <button class="carousel-arrow" id="carousel-next" type="button" aria-label="Next photo">→</button>
+        </div>
+    </section>
+
+    <dialog class="lightbox gallery-lightbox" aria-label="Memorial photo and video viewer">
+        <div class="lightbox-toolbar">
+            <button class="lightbox-close" type="button" aria-label="Close viewer">Close</button>
+        </div>
+        <div class="lightbox-stage">
+            <button class="lightbox-previous" type="button" aria-label="Previous memory">‹</button>
+            <div class="lightbox-media">
+                <img alt="">
+                <video controls playsinline></video>
+                <p class="lightbox-video-error" role="status" hidden>
+                    This video format could not be played in this browser.
+                </p>
+            </div>
+            <button class="lightbox-next" type="button" aria-label="Next memory">›</button>
+        </div>
+        <div class="lightbox-meta">
+            <span class="lightbox-count" aria-live="polite"></span>
+            <a class="lightbox-download" download>Download original</a>
+        </div>
+    </dialog>
+</main>
+
+<footer class="site-footer">
+    In loving memory of Akhila Reji
+</footer>
+
+<script src="js/gallery.js" defer></script>
+<script src="js/script.js" defer></script>
+</body>
+</html>
