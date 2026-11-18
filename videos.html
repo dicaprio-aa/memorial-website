@@ -8,7 +8,7 @@
     <title>Video Memories of Akhila Reji</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body class="gallery-page video-gallery-page">
 
 <header class="site-header">
     <a href="index.html" class="logo">Akhila Reji</a>
@@ -21,15 +21,45 @@
     </nav>
 </header>
 
-<main class="content-page">
-    <section class="page-heading">
-        <span class="gold-text">INTO THE LIGHT OF ETERNITY</span>
-        <h1>Video Memories</h1>
+<main class="gallery-shell">
+    <section class="gallery-heading">
+        <span class="gallery-kicker">VIDEO MEMORIES</span>
+        <h1>Memories Forever</h1>
         <p>Watch and remember Akhila Reji through these treasured videos.</p>
     </section>
 
-    <section class="video-grid" id="video-grid" aria-label="Video memories of Akhila Reji">
+    <section class="gallery-carousel" aria-label="Video memories carousel">
+        <div class="carousel-stage" id="video-carousel-stage" aria-live="polite">
+            <button class="carousel-card carousel-card--far-left" type="button" data-position="far-left" aria-label="Play video preview"></button>
+            <button class="carousel-card carousel-card--left" type="button" data-position="left" aria-label="Play video preview"></button>
+            <button class="carousel-card carousel-card--center" type="button" data-position="center" aria-label="Play video preview"></button>
+            <button class="carousel-card carousel-card--right" type="button" data-position="right" aria-label="Play video preview"></button>
+            <button class="carousel-card carousel-card--far-right" type="button" data-position="far-right" aria-label="Play video preview"></button>
+        </div>
+        <div class="carousel-controls">
+            <button class="carousel-arrow" id="video-previous" type="button" aria-label="Previous video">←</button>
+            <span class="carousel-count" id="video-count" aria-live="polite"></span>
+            <button class="carousel-arrow" id="video-next" type="button" aria-label="Next video">→</button>
+        </div>
     </section>
+
+    <dialog class="lightbox gallery-lightbox video-lightbox" aria-label="Video memory player">
+        <div class="lightbox-toolbar">
+            <button class="lightbox-close" type="button" aria-label="Close video player">Close</button>
+        </div>
+        <div class="lightbox-stage">
+            <button class="lightbox-previous" type="button" aria-label="Previous video">‹</button>
+            <div class="lightbox-media">
+                <video controls playsinline preload="metadata"></video>
+                <p class="lightbox-video-error" role="status" hidden></p>
+            </div>
+            <button class="lightbox-next" type="button" aria-label="Next video">›</button>
+        </div>
+        <div class="lightbox-meta">
+            <span class="lightbox-count" aria-live="polite"></span>
+            <a class="lightbox-download" download>Download original</a>
+        </div>
+    </dialog>
 </main>
 
 <footer class="site-footer">
