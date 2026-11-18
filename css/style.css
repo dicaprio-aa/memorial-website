@@ -329,17 +329,24 @@ button {
 
 .story-image {
     min-width: 0;
+    width: 100%;
+    aspect-ratio: 3 / 2;
+    display: grid;
+    place-items: center;
     overflow: hidden;
-    border-radius: 8px;
-    background: var(--color-sky);
+    border-radius: 12px;
+    background: #f3f7f9;
+    box-shadow: 0 8px 24px rgba(43, 66, 82, .10);
 }
 
 .story-image img {
     display: block;
     width: 100%;
-    max-height: 600px;
-    object-fit: cover;
+    height: 100%;
+    max-height: none;
+    object-fit: contain;
     object-position: center;
+    border-radius: inherit;
 }
 
 .story-image.image-missing {
