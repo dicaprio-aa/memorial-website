@@ -202,6 +202,26 @@ body.home-page .home-brand {
     font: 600 clamp(27px, 3.1vw, 44px)/1.35 var(--home-serif);
     letter-spacing: .035em;
 }
+.hero-instagram {
+    position: relative;
+    z-index: 3;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    min-height: 44px;
+    margin-top: 10px;
+    padding: 0 8px;
+    border: 1px solid rgba(214, 183, 111, .32);
+    border-radius: 999px;
+    color: var(--home-gold-light);
+    font: 500 12px/1 var(--home-sans);
+    letter-spacing: .035em;
+    text-decoration: none;
+    transition: color .2s ease, border-color .2s ease, background-color .2s ease;
+}
+.hero-instagram svg { display: block; width: 17px; height: 17px; flex: 0 0 auto; }
+.hero-instagram:hover { border-color: var(--home-gold-light); background: rgba(214, 183, 111, .08); color: #f4dda5; }
+.hero-instagram:focus-visible { outline: 2px solid var(--home-gold-light); outline-offset: 3px; }
 .hero-candle { position: absolute; z-index: 1; right: 1%; bottom: -2%; width: clamp(300px, 32vw, 500px); max-width: 46%; height: min(76%, 650px); object-fit: contain; object-position: center bottom; filter: drop-shadow(0 0 30px rgba(236, 173, 64, .24)); pointer-events: none; }
 .candle-flame { transform-origin: 50% 92%; animation: candle-flicker 2.6s ease-in-out infinite alternate; }
 .flame-halo { transform-origin: center; animation: candle-glow 3.1s ease-in-out infinite alternate; }

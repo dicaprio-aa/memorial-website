@@ -151,7 +151,9 @@ const galleryFilenames = [
     "f15607_f62d4f13d0d64820a7edfd63e464de84~mv2.jpg",
     "f15607_f6fab56832ae483290979e869f29cecc~mv2.jpg",
     "f15607_faeaebed5e724392ac54a3cab5381c0c~mv2.jpg",
-    "f15607_fbc74b06d44a4894aed04d3e11067c9e~mv2.jpg"
+    "f15607_fbc74b06d44a4894aed04d3e11067c9e~mv2.jpg",
+    "family.jpg",
+    "1234.jpg"
 ];
 
 const gallery = document.querySelector("#carousel-stage");
