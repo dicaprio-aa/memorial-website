@@ -67,7 +67,7 @@ body.home-page .home-brand {
 .home-hero {
     position: relative;
     display: grid;
-    min-height: max(760px, calc(100svh - 78px));
+    min-height: max(680px, calc(100svh - 78px));
     overflow: hidden;
     isolation: isolate;
     background:
@@ -91,27 +91,25 @@ body.home-page .home-brand {
     display: grid;
     width: min(100%, 1600px);
     min-height: inherit;
-    grid-template-columns: minmax(0, 1.1fr) minmax(380px, .9fr);
-    align-items: stretch;
-    gap: clamp(20px, 5vw, 84px);
+    grid-template-columns: minmax(300px, .9fr) minmax(0, 1.1fr);
+    align-items: center;
+    gap: clamp(42px, 8vw, 120px);
     margin-inline: auto;
-    padding: 38px clamp(28px, 6vw, 90px) 54px;
+    padding: 52px clamp(36px, 8vw, 128px) 68px;
 }
 .hero-portrait-column {
     position: relative;
     z-index: 3;
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 30px 0 0;
 }
 .hero-portrait {
     position: relative;
     z-index: 2;
     display: grid;
-    width: clamp(270px, 30vw, 440px);
-    height: clamp(270px, 30vw, 440px);
+    width: clamp(300px, 25vw, 350px);
+    height: clamp(300px, 25vw, 350px);
     flex: 0 0 auto;
     place-items: center;
     padding: 10px;
@@ -141,45 +139,37 @@ body.home-page .home-brand {
     transition: opacity .45s ease;
 }
 .hero-portrait img.is-fading { opacity: .12; }
-.hero-portrait figcaption {
-    position: absolute;
-    left: 0;
-    width: 100%;
-    bottom: -20px;
-    color: rgba(238, 225, 196, .78);
-    font: italic 13px var(--home-serif);
-    letter-spacing: .08em;
-    text-align: center;
-    white-space: nowrap;
-}
-.hero-remembrance { width: min(100%, 600px); margin-top: 28px; text-align: left; }
-.hero-whisper {
-    max-width: 540px;
-    margin: 0 0 10px;
-    color: #d6a343;
-    font: 18px/1.45 var(--home-serif);
-    letter-spacing: .025em;
-    text-wrap: balance;
-}
-.hero-remembrance h1 {
-    margin: 0;
-    color: #f6f2e8;
-    font: 500 clamp(43px, 5.2vw, 78px)/.99 var(--home-serif);
-    letter-spacing: .025em;
-    text-shadow: 0 3px 30px rgba(0, 0, 0, .55);
-    text-transform: uppercase;
-}
 .hero-copy {
     position: relative;
     z-index: 3;
-    align-self: stretch;
-    min-height: inherit;
     display: flex;
+    max-width: 660px;
     flex-direction: column;
     align-items: flex-start;
-    justify-content: flex-start;
-    padding: clamp(96px, 15vh, 190px) 20px 0 0;
+    justify-content: center;
+    padding: 0 36px 126px 0;
     text-align: left;
+}
+.hero-kicker {
+    margin: 0 0 12px;
+    color: #d6c38f;
+    font: 600 13px/1.5 var(--home-sans);
+    letter-spacing: .25em;
+}
+.hero-name {
+    margin: 0;
+    color: var(--home-gold-light);
+    font: 500 clamp(42px, 5vw, 66px)/1.08 var(--home-serif);
+    letter-spacing: .015em;
+    text-shadow: 0 3px 28px rgba(0, 0, 0, .35);
+}
+.hero-whisper {
+    max-width: 470px;
+    margin: 22px 0 0;
+    color: #e1ded6;
+    font: 400 17px/1.75 var(--home-serif);
+    letter-spacing: .01em;
+    text-wrap: balance;
 }
 .eyebrow, .section-kicker {
     margin: 0 0 15px;
@@ -190,17 +180,16 @@ body.home-page .home-brand {
     line-height: 1.5;
     text-transform: uppercase;
 }
-.hero-copy .eyebrow { display: none; }
 .hero-dates {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: flex-start;
-    gap: 7px 13px;
-    margin-top: 0;
+    gap: 4px 10px;
+    margin-top: 16px;
     color: #f1ede5;
-    font: 600 clamp(27px, 3.1vw, 44px)/1.35 var(--home-serif);
-    letter-spacing: .035em;
+    font: 500 clamp(17px, 1.7vw, 21px)/1.55 var(--home-sans);
+    letter-spacing: .015em;
 }
 .hero-instagram {
     position: relative;
@@ -209,7 +198,7 @@ body.home-page .home-brand {
     align-items: center;
     gap: 8px;
     min-height: 44px;
-    margin-top: 10px;
+    margin-top: 18px;
     padding: 0 8px;
     border: 1px solid rgba(214, 183, 111, .32);
     border-radius: 999px;
@@ -222,15 +211,15 @@ body.home-page .home-brand {
 .hero-instagram svg { display: block; width: 17px; height: 17px; flex: 0 0 auto; }
 .hero-instagram:hover { border-color: var(--home-gold-light); background: rgba(214, 183, 111, .08); color: #f4dda5; }
 .hero-instagram:focus-visible { outline: 2px solid var(--home-gold-light); outline-offset: 3px; }
-.hero-candle { position: absolute; z-index: 1; right: 1%; bottom: -2%; width: clamp(300px, 32vw, 500px); max-width: 46%; height: min(76%, 650px); object-fit: contain; object-position: center bottom; filter: drop-shadow(0 0 30px rgba(236, 173, 64, .24)); pointer-events: none; }
+.hero-candle { position: absolute; z-index: 1; right: 2%; bottom: 0; width: clamp(170px, 17vw, 250px); max-width: 27%; height: min(48%, 390px); object-fit: contain; object-position: center bottom; filter: drop-shadow(0 0 26px rgba(236, 173, 64, .2)); pointer-events: none; }
 .candle-flame { transform-origin: 50% 92%; animation: candle-flicker 2.6s ease-in-out infinite alternate; }
 .flame-halo { transform-origin: center; animation: candle-glow 3.1s ease-in-out infinite alternate; }
 .hero-dove {
     position: absolute;
     z-index: 2;
-    bottom: 23%;
-    left: 1%;
-    width: clamp(86px, 8vw, 112px);
+    bottom: 17%;
+    left: 2%;
+    width: clamp(72px, 6vw, 96px);
     height: auto;
     object-fit: contain;
     opacity: .96;
@@ -443,10 +432,11 @@ body.home-page .home-brand {
 @keyframes candle-glow { from { opacity: .56; transform: scale(.94); } to { opacity: .95; transform: scale(1.08); } }
 
 @media (max-width: 1000px) {
-    .hero-stage { grid-template-columns: minmax(0, 1fr) minmax(300px, .88fr); gap: 14px; padding-inline: 38px; }
-    .hero-portrait { width: clamp(250px, 32vw, 350px); height: clamp(250px, 32vw, 350px); }
-    .hero-candle { right: -2%; bottom: -1%; width: clamp(270px, 33vw, 390px); max-width: 49%; }
-    .hero-dove { left: -1%; bottom: 24%; width: 104px; }
+    .hero-stage { grid-template-columns: minmax(300px, .95fr) minmax(0, 1.05fr); gap: 28px; padding-inline: 38px; }
+    .hero-portrait { width: 300px; height: 300px; }
+    .hero-copy { padding-right: 16px; }
+    .hero-candle { right: 1%; width: 180px; max-width: 24%; }
+    .hero-dove { left: 1%; bottom: 15%; width: 76px; }
     .quote-inner { grid-template-columns: 1fr .6fr .3fr; gap: 14px; }
     .quote-candle { width: 95px; }
 }
@@ -469,17 +459,18 @@ body.home-page .home-brand {
     .primary-navigation.is-open { display: flex; }
     .primary-navigation a { padding: 11px 4px; }
     .primary-navigation .nav-share { align-self: flex-start; margin-top: 5px; padding: 8px 13px; }
-    .home-hero { min-height: auto; }
-    .hero-stage { min-height: 0; grid-template-columns: minmax(0,1fr); gap: 0; padding: 24px 20px 210px; }
-    .hero-copy { order: -1; min-height: 0; padding: 0 6px; }
-    .hero-dates { margin-top: 0; font-size: clamp(18px, 4.6vw, 23px); }
-    .hero-portrait-column { padding-top: 20px; }
-    .hero-portrait { width: min(60vw, 250px); height: min(60vw, 250px); }
-    .hero-remembrance { width: min(100%, 450px); margin-top: 25px; }
-    .hero-whisper { max-width: 350px; font-size: 15px; }
-    .hero-remembrance h1 { font-size: clamp(37px, 10vw, 55px); }
-    .hero-candle { top: 495px; right: 2px; width: 100px; height: 140px; opacity: .86; }
-    .hero-dove { top: 520px; bottom: auto; left: 2px; width: 44px; }
+    .home-hero { min-height: 0; }
+    .hero-stage { min-height: 0; grid-template-columns: minmax(0,1fr); gap: 27px; padding: 38px 20px 150px; }
+    .hero-portrait-column { padding: 0; }
+    .hero-portrait { width: clamp(200px, 60vw, 240px); height: clamp(200px, 60vw, 240px); }
+    .hero-copy { width: min(100%, 560px); align-items: center; margin-inline: auto; padding: 0 2px 142px; text-align: center; }
+    .hero-kicker { margin-bottom: 9px; font-size: 11px; letter-spacing: .21em; }
+    .hero-name { font-size: clamp(37px, 9.5vw, 52px); }
+    .hero-dates { width: 100%; justify-content: center; gap: 3px 6px; margin-top: 13px; font-size: clamp(13px, 3.6vw, 15px); }
+    .hero-whisper { max-width: 410px; margin-top: 17px; font-size: 15px; line-height: 1.7; }
+    .hero-instagram { margin-top: 14px; }
+    .hero-candle { top: auto; right: 8px; bottom: 0; width: 94px; max-width: 27%; height: 130px; opacity: .86; }
+    .hero-dove { top: auto; bottom: 13px; left: 7px; width: 44px; }
     .intro-section { gap: 27px; padding: 62px 22px 78px; }
     .intro-copy { margin-inline: auto; text-align: center; }
     .intro-copy .intro-description { margin-inline: auto; font-size: 17px; }
@@ -523,9 +514,10 @@ body.home-page .home-brand {
     body.home-page { font-size: 15px; }
     body.home-page .home-brand { font-size: 21px; }
     .hero-stage { padding-inline: 16px; }
-    .hero-dates { gap: 2px 7px; font-size: clamp(17px, 5vw, 20px); }
-    .hero-candle { top: 495px; right: 2px; width: 86px; height: 125px; }
-    .hero-dove { top: 520px; left: 2px; width: 40px; }
+    .hero-name { font-size: clamp(32px, 8.8vw, 37px); }
+    .hero-dates { gap: 2px 4px; font-size: 13px; }
+    .hero-candle { right: 5px; width: 82px; height: 116px; }
+    .hero-dove { left: 5px; width: 40px; }
     .section-shell { padding-inline: 18px; }
     .section-heading h2 { font-size: 33px; }
     .album-frame { padding-inline: 10px; }
