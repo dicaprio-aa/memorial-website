@@ -685,7 +685,7 @@ button {
     top: 50%;
     left: 50%;
     display: block;
-    width: clamp(190px, 29vw, 370px);
+    width: 24%;
     height: clamp(240px, 30vw, 360px);
     padding: 0;
     overflow: hidden;
@@ -694,7 +694,7 @@ button {
     background: #e7eef2;
     box-shadow: 0 12px 30px rgba(36, 54, 68, .18);
     cursor: zoom-in;
-    transform: translate(calc(-50% + var(--card-x, 0px)), -50%) scale(var(--card-scale, 1));
+    transform: translate(-50%, -50%) scale(var(--card-scale, 1));
     opacity: var(--card-opacity, 1);
     transition: transform .42s cubic-bezier(.2, .7, .2, 1), opacity .3s ease;
 }
@@ -732,28 +732,28 @@ button {
 
 .carousel-card--left {
     z-index: 4;
-    --card-x: clamp(-310px, -24vw, -140px);
+    left: 27%;
     --card-scale: .84;
     --card-opacity: .98;
 }
 
 .carousel-card--right {
     z-index: 4;
-    --card-x: clamp(140px, 24vw, 310px);
+    left: 73%;
     --card-scale: .84;
     --card-opacity: .98;
 }
 
 .carousel-card--far-left {
     z-index: 2;
-    --card-x: clamp(-620px, -48vw, -220px);
+    left: 8%;
     --card-scale: .66;
     --card-opacity: .9;
 }
 
 .carousel-card--far-right {
     z-index: 2;
-    --card-x: clamp(220px, 48vw, 620px);
+    left: 92%;
     --card-scale: .66;
     --card-opacity: .9;
 }
@@ -764,7 +764,7 @@ button {
 }
 
 .carousel-stage.is-changing .carousel-card--center {
-    transform: translate(calc(-50% + var(--card-x, 0px)), -50%) scale(.96);
+    transform: translate(-50%, -50%) scale(.96);
 }
 
 .carousel-card[hidden] {
@@ -1156,24 +1156,21 @@ button {
     }
 
     .carousel-card {
-        width: clamp(190px, 36vw, 310px);
+        width: 36%;
         height: clamp(240px, 39vw, 330px);
     }
 
     .carousel-card--left {
-        --card-x: clamp(-260px, -25vw, -135px);
+        left: 16%;
     }
 
     .carousel-card--right {
-        --card-x: clamp(135px, 25vw, 260px);
+        left: 84%;
     }
 
-    .carousel-card--far-left {
-        --card-x: clamp(-490px, -48vw, -230px);
-    }
-
+    .carousel-card--far-left,
     .carousel-card--far-right {
-        --card-x: clamp(230px, 48vw, 490px);
+        display: none;
     }
 }
 
@@ -1274,25 +1271,14 @@ button {
     }
 
     .carousel-card {
-        width: clamp(180px, 52vw, 225px);
+        width: min(86%, 275px);
         height: clamp(225px, 65vw, 275px);
         border-radius: 10px;
     }
 
-    .carousel-card--left {
-        --card-x: clamp(-190px, -39vw, -145px);
-    }
-
+    .carousel-card--left,
     .carousel-card--right {
-        --card-x: clamp(145px, 39vw, 190px);
-    }
-
-    .carousel-card--far-left {
-        --card-x: clamp(-290px, -68vw, -245px);
-    }
-
-    .carousel-card--far-right {
-        --card-x: clamp(245px, 68vw, 290px);
+        display: none;
     }
 
     .carousel-controls {

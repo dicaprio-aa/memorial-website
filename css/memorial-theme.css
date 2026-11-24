@@ -190,6 +190,13 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 }
 .gallery-kicker { color: #d1b36f; letter-spacing: .22em; }
 .gallery-heading p { color: #bdc5cf; font: 16px/1.6 var(--font-display); }
+.gallery-flowers {
+    display: block;
+    width: min(240px, 70%);
+    height: auto;
+    margin: 12px auto 0;
+    mask-image: radial-gradient(ellipse 50% 85% at 50% 22%, #000 62%, transparent 100%);
+}
 .gallery-filter {
     border-color: rgba(220,189,120,.34);
     color: #e1e4e8;
@@ -201,6 +208,13 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
     border-color: rgba(241,220,174,.68);
     background: #101a2b;
     box-shadow: 0 14px 34px rgba(0,0,0,.42), 0 0 16px rgba(214,181,108,.11);
+}
+.carousel-card:has(img) {
+    padding: clamp(6px, 1vw, 12px);
+    background: #18243a;
+}
+.carousel-card img {
+    object-fit: contain;
 }
 .carousel-card .carousel-play {
     border-color: rgba(228,199,130,.9);
